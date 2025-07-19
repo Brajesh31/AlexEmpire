@@ -1,0 +1,154 @@
+/* Aurora Background */
+.aurora-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #1F3B73 0%, #D4AF37 100%);
+    overflow: hidden;
+    z-index: -2;
+    mix-blend-mode: screen;
+    opacity: 0.3;
+    animation: wave 20s linear infinite;
+    transform: rotate(30deg);
+  }
+  
+  /* Gradient Glow */
+  .gradient-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, #D4AF37, #0B0C2A);
+    opacity: 0.15;
+    z-index: -2;
+    animation: pulseGlow 6s ease-in-out infinite;
+    mix-blend-mode: screen;
+  }
+  
+  /* 3D Orb */
+  .orb {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #D4AF37 0%, #0B0C2A 80%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    animation: rotateOrb 12s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1.1);
+    }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.15;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes rotateOrb {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* SVG Trail */
+  .svg-animation svg {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .svg-animation svg path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 6s ease-in-out infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* Floating Glow Orbs */
+  .glow-orb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.8), transparent);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    animation: floatingOrbs 4s ease-in-out infinite;
+  }
+  
+  /* Parallax Stars */
+  .parallax-stars .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  /* Neon Grid Layer */
+  .neon-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -3;
+  }
+  
+  /* Dreamy Fog */
+  .dreamy-fog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(245,245,245,0.04), transparent);
+    z-index: -4;
+    animation: fogMove 50s linear infinite;
+    opacity: 0.2;
+  }
+  
+  @keyframes fogMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+  
+  /* General container */
+  .background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  

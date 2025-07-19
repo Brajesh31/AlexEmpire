@@ -1,0 +1,202 @@
+ <div style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
+        {/* Bouncing Balls Canvas */}
+        <BouncingBalls />
+        <Link to='/'><img
+          src={logo}
+          alt="Logo"
+          style={{ position: "absolute", top: "20px", left: "20px", width: "100px", height: "100px" }}
+        /></Link>
+
+
+        <div style={{ position: "fixed", top: "20px", right: "20px", }}>
+          <div onClick={() => setIsOpen(!isOpen)} style={{
+            color: "gold", position: "relative",
+            fontSize: "12px",
+            display: "flex",
+            textDecoration: "none",
+            cursor: "pointer",
+            alignItems: "center",
+          }}
+          >
+            <img src={data && data.profilePic} alt="" style={{ width: "50px", height: "40px", borderRadius: "50%", marginRight: "10px", }}
+            />
+            <h1 style={{ fontSize: "29px", marginLeft: "5px" }}>
+              Welcome {data ? data.firstname : "Guest"}!
+            </h1>
+          </div>
+
+          {isOpen && (
+            <div
+              style={{
+                position: "absolute",
+                top: "100%",
+                left: 230,
+                color: "white",
+                fontSize: "16px",
+                background: "gold",
+                border: "1px solid #ccc",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                borderRadius: "5px",
+                padding: "10px",
+                width: "100px",
+                zIndex: 1000,
+              }}
+            >
+              <Link to='/profile' style={{ textDecoration: "none" }} ><div style={{ color: "white", textDecoration: "none", padding: "10px", cursor: "pointer" }}>Profile</div></Link>
+              <hr style={{ color: "black", height: "3px", width: "100%" }} />
+              <Link to='/admin' style={{ textDecoration: "none" }}  ><div style={{ color: "white", textDecoration: "none", padding: "10px", cursor: "pointer" }}>Admin</div></Link>
+              {/* <hr style={{color:"black", height:"3px", width:"100%"}}/> */}
+
+            </div>
+          )}
+        </div>
+        {/* <div style={{ color: "white", position: "fixed", top: "20px", right: "20px", fontSize: "12px", display: "flex" }}>
+        <div style={{ color: "gold", fontSize: "12px", display: "flex", textDecoration:"none"}}>
+        <img src={data && data.profilePic} alt="" style={{width:"50px", height:"40px",borderRadius:"50%", marginRight:"10px"}} />
+          <h1 style={{ fontSize: "29px", marginLeft: "5px" }}>Welcome {data ? data.firstname : "Guest"}!</h1>
+        </div>
+        </div> */}
+        <div className={`cart ${isCartActive ? "active" : ""}`}>
+          <h2 className="cart-title">Your Cart</h2>
+          <div className="cart-content">
+          {cartItems.map((item) => (
+              <div className="cart-box" key={item._id}>
+                <img src={item.image} alt="" className="cart-img" />
+                <div className="cart-details">
+                  <h2 className="cart-product-title">{item.title}</h2>
+                  <span className="cart-price">${item.price}</span>
+                  <div className="cart-quantity">
+                    <button onClick={() => updateQuantity(item._id, "dec")}>
+                      -
+                    </button>
+                    <span className="number">{item.quantity}</span>
+                    <button onClick={() => updateQuantity(item._id, "inc")}>
+                      +
+                    </button>
+                  </div>
+                </div>
+                <button
+                  className="cart-remove"
+                  onClick={() => removeFromCart(item._id)}
+                >
+                  🗑
+                </button>
+              </div>
+            ))}
+            <button style={{ width: "10%", height: "8%", border:"none", backgroundColor:"transparent" }} onClick={() => setIsCartActive(false)} id="cart-close">
+                x
+          </button>
+          </div>
+          
+          <div className="total">
+          <h3>Total: ${getTotal().toFixed(2)}</h3>
+          </div>
+          <button className="btn-buy">Buy Now</button>
+          <i className="ri-close-large-line" id="cart-close"></i>
+        </div>
+
+        {/* Signi Form */}
+        {/* Link to='/profile' */}
+        <div className='freedoq'>
+          <div className="shop"  >
+            <h2 style={{ color: "white" }}>Available Products</h2>
+            {/* Cart Icon Button */}
+            {/* <button style={{
+              width: "5%",
+              height: "8%",
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              backgroundColor: "gold",
+              border: "none",
+              borderRadius: "8px",
+              color: "white",
+              fontSize: "24px",
+              cursor: "pointer",
+            }} onClick={() => setIsCartActive(true)} id="cart-icon">
+              <CartIcon cartCount={cartItems.length} />
+              {cartItems.length > 0 && (
+          <span className="cart-item-count">{cartItems.length}</span>
+        )} <div style={{ position: "relative", display: "inline-block" }}>
+        <ShoppingCartIcon style={{ fontSize: 30, color: "#333" }} />
+        {cartCount > 0 && (
+          <span style={{
+            position: "absolute",
+            top: -6,
+            right: -6,
+            backgroundColor: "red",
+            color: "white",
+            fontSize: 12,
+            padding: "2px 6px",
+            borderRadius: "50%",
+            fontWeight: "bold",
+            boxShadow: "0 0 4px rgba(0,0,0,0.2)"
+          }}>
+            {cartCount}
+          </span>
+        )}
+      </div>
+            </button> */}
+            <div
+  style={{
+    position: "absolute",
+    top: "20px",
+    right: "20px",
+    cursor: "pointer",
+    backgroundColor: "gold",
+    border: "none",
+    borderRadius: "8px",
+    padding: "10px",
+  }}
+  onClick={() => setIsCartActive(true)}
+>
+  <div style={{ position: "relative", display: "inline-block" }}>
+    <ShoppingCartIcon style={{ fontSize: 30, color: "#333" }} />
+    {cartItems.length > 0 && (
+      <span style={{
+        position: "absolute",
+        top: "-8px",
+        right: "-8px",
+        backgroundColor: "red",
+        color: "white",
+        fontSize: "12px",
+        padding: "3px 6px",
+        borderRadius: "50%",
+        fontWeight: "bold",
+        boxShadow: "0 0 4px rgba(0,0,0,0.3)"
+      }}>
+        {cartItems.length}
+      </span>
+    )}
+  </div>
+</div>
+
+            <div className='products-content'>
+              {products.map((product) => (
+                <div key={product._id} className="product-box">
+                  <Link to={`/product/${product._id}`} style={{ textDecoration: "none", color: "inherit" }}>
+                    <div className="img-box">
+                      {product.imageUrl?.length > 0 && (
+                        <img src={product.imageUrl[0]} alt={product.name} />
+                      )}
+                    </div>
+                    <div className='daq'><h2 className="product-title">{product.name}</h2></div>
+                    {/* <p className="products-titlep">{product.description}</p> */}
+                    <div className="price-and-cart">
+                      <span className="price">{product.price}</span>
+                      <button className='add-cart'>View</button>
+
+                    </div>
+                  </Link>
+                   {/* Move this outside the Link */}
+    <div onClick={() => addToCart(product)} style={{ marginTop: "5px", cursor: "pointer", color: "gold" }}>
+      Add to Cart
+    </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
+
+        </div>
+      </div>

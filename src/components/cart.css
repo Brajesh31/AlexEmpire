@@ -1,0 +1,34 @@
+.card {
+    border: 1px solid #333;
+    transition: transform 0.2s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.01);
+  }
+  .btn-warning {
+    background-color: #D4AF37;
+    border: none;
+  }
+  .btn-warning:hover {
+    background-color: #c99b2b;
+  }
+    .btn-danger {
+        background-color: #FF6347;
+        border: none;
+    }  
+    .has{
+      height:205px;
+    }
+    #cax{
+      height: 100%;
+      justify-items: center;
+    }
+
+    .checkout-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 30px; */
+        padding: 10px;
+        height: 100vh;
+    }

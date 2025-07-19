@@ -1,0 +1,200 @@
+/* Global Styles */
+/* *{
+    background-color: #0B0C2A; 
+} */
+body {
+    background-color: #F5F5F5; /* Ivory White background */
+    color: #111111; /* Charcoal Black text */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+  
+  .container{
+    background-color: #F5F5F5;; /* Ivory White */
+    padding: 20px;
+    /* overflow-x: hidden; */
+  }
+  
+  h4 {
+    color: #0B0C2A; /* Deep Navy for headers */
+  }
+  
+  /* Header
+  .header {
+    background-color: #0B0C2A; 
+    color: #F5F5F5; 
+  }
+  
+  header .brand {
+    color: #D4AF37; 
+  } */
+  /* .muah{
+        background-color: #F5F5F5; 
+
+  } */
+
+  #saw{
+    color: #0B0C2A; /* Charcoal Black for text */
+  }
+   #vad{
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+   }
+  /* Sidebar */
+  .sidebar {
+    background-color: #F5F5F5; /* Charcoal Black for sidebar */
+    color: #0B0C2A; /* Ivory White for text */
+    position: fixed;
+  top: 10px;
+  left: 0;
+  width: 230px; /* Adjust the width as needed */
+  height: 100vh; /* Full height of the viewport */
+  padding: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .sidebar .form-check-label {
+    color: #0B0C2A; /* Ivory White for labels */
+    cursor: pointer;
+  }
+  
+  .sidebar .btn-primary {
+    background-color: #D4AF37; /* Primary Gold for buttons */
+    border-color: #D4AF37;
+  }
+  
+  .sidebar .form-check-input:checked {
+    background-color: #D4AF37; /* Primary Gold for checked input */
+  }
+  
+  /* Product Cards */
+  .card {
+    background-color: #fff; /* Ivory White */
+    border: 1px solid #ddd; /* Light gray border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    color: #0B0C2A; /* Deep Navy */
+  }
+  
+  .card-subtitle {
+    color: #C14B4B; /* Crimson Tint for discounts or special info */
+  }
+  
+  .card .text-success {
+    color: #1F3B73; /* Royal Blue for "In Stock" */
+  }
+  
+  /* Buttons */
+  .btn-warning {
+    background-color: #D4AF37; /* Primary Gold */
+    color: #fff;
+  }
+  
+  .btn-warning:hover {
+    background-color: #1F3B73; /* Royal Blue hover */
+    color: #fff;
+  }
+  
+  .btn-primary {
+    background-color: #D4AF37; /* Primary Gold */
+  }
+  
+  .btn-primary:hover {
+    background-color: #1F3B73; /* Royal Blue */
+    border-color: #1F3B73;
+  }
+  
+  /* Pagination */
+  .page-item.active .page-link {
+    background-color: #D4AF37; /* Primary Gold for active page */
+    border-color: #D4AF37;
+  }
+  
+  .page-link {
+    color: #111111; /* Charcoal Black for pagination links */
+  }
+  
+  .page-link:hover {
+    background-color: #1F3B73; /* Royal Blue hover effect */
+    color: #fff;
+  }
+  .main-content {
+    margin-top: -30px;
+    margin-left: 120px; /* Adjust this according to your sidebar width */
+    width: 98%;
+  }
+  .daxp{
+    display: none;
+    --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
+   
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  .waxq{
+    --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
+    display: block;
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  @media (max-width:600px) {
+    .main-content{
+      margin-top: -30px;
+      margin-left: 5px; /* Adjust this according to your sidebar width */
+      width: 96%;
+    }
+    .sidebar {
+      display: none;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .waxq{
+      display: none;
+    }
+    .daxp{
+      display: block;
+    }
+  }

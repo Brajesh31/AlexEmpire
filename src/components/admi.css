@@ -1,0 +1,105 @@
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.admin-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: darkgoldenrod;
+}
+.freedov{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    width: 75%;
+    overflow: hidden;
+    height: fit-content;
+}
+.scrollable-content {
+    max-height: 67vh; /* Adjust to fit the screen nicely */
+    overflow-y: auto;
+    padding-right: 10px; /* prevent content cutoff */
+  }
+  .laz{
+        padding: 10px 20px;
+        background-color: gold;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        right: 170px;
+        position: absolute;
+        bottom: 0px;
+        font-weight: bold
+  }
+.freedova{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+    padding: 60px;
+    overflow: hidden;
+}
+@media (max-width:670px) {
+    .freedova{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        width:90%;
+        height: 70%;
+        padding: 20px;
+        overflow: hidden;
+      }
+      .laz{
+        position: absolute;
+        padding: 10px 20px;
+        background-color: gold;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        right: 10px;
+        bottom: 20px;
+        font-weight: bold
+  }}
