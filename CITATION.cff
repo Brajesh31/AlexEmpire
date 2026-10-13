@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "AlexEmpire"
+message: "If you use this software, please cite the repository."
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Brajesh
+    affiliation: "Independent"
+repository-code: "https://github.com/brajesh31/AlexEmpire"
+abstract: "A React and Vite storefront interface with product, account, cart, and checkout screens."
+keywords:
+  - React
+  - Vite
+  - ecommerce
+  - storefront
+license: MIT
+version: 0.0.0
