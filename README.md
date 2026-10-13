@@ -1,12 +1,34 @@
-# React + Vite
+# AlexEmpire
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AlexEmpire is a React 19 and Vite storefront for browsing products, viewing product details, managing a cart, checking out, and using account and administration screens. The interface uses React Router, Material UI, Bootstrap, animation libraries, and local image assets.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Product browsing, categories, search, details, and favorites
+- Cart quantity and removal controls
+- Checkout and profile screens
+- Login, signup, password reset, and administrator routes
+- Responsive UI with Material UI, Bootstrap, custom CSS, and animations
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```powershell
+npm ci
+Copy-Item .env.example .env
+npm run dev
+```
+
+Available scripts:
+
+```powershell
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
+
+The current `.env` contains Cloudinary credentials and must remain local. Rotate any credentials that have ever been committed or shared, and use restricted server-side configuration for production.
+
+See [docs/architecture.md](docs/architecture.md), [docs/development.md](docs/development.md), and [docs/security.md](docs/security.md).
+
+Maintained by Brajesh Kumar (`brajesh31`).
